@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-container {
+    width: 20%;
+}
+
+button {
+    margin-top: 6px;
+    padding: 6px;    
+    font-size: large;
+    background-color: #007bff; /* Modern blue background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.message-container {
+    height: 50vh;
+    padding: 4px;    
+}
+
+.message {
+    padding: 6px;
+    background-color: #3b8be0;
+    color: white;
+    border-radius: 10px;
+}
