@@ -14,11 +14,13 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'public/index.html'));
 });
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
+io.on('connection', (socket) => {    
+    socket.on('chat message', (msg) => {        
+        io.emit('chat message', msg)
+    });
     socket.on('disconnect', () => {
-      console.log('a user disconnected');
-    })    
+        console.log('a user disconnected');
+    })
 });
 
 server.listen(3000, () => {
