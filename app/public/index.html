@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  </link>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/css/emoji.css" rel="stylesheet">
+  </link>  
   <title>Chat</title>
 </head>
 
@@ -15,31 +13,14 @@
   <div class="chat-container">
     <div id="messages" class="message-container"></div>
     <div id="form-box">
-      <form id="form" action="">
-        <div class="emoji-picker-container">
-          <input type="text" id="input" autocomplete="off" data-emojiable="true" />
-        </div>
-        <button>Send</button>
+      <form id="form" action="">      
+          <textarea id="input" ></textarea>        
+          <button>Send</button>
       </form>
     </div>
   </div>
   <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-  <script type="module" src='bundle/index.js'></script>
-  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-  <script src="lib/js/config.min.js"></script>
-  <script src="lib/js/util.min.js"></script>
-  <script src="lib/js/jquery.emojiarea.min.js"></script>
-  <script src="lib/js/emoji-picker.min.js"></script>
-  <script>
-    $(function () {
-      window.emojiPicker = new EmojiPicker({
-        emojiable_selector: '[data-emojiable=true]',
-        assetsPath: '/lib/img/',
-        popupButtonClasses: 'fa fa-smile-o'
-      });
-      window.emojiPicker.discover();
-    });
-  </script>
+  <script type="module" src='bundle/index.js'></script>  
 </body>
 
 </html>
